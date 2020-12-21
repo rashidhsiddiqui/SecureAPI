@@ -34,7 +34,7 @@ namespace SecureAPI
                 });
             services.AddControllers();
 
-            //Comment
+            //Comment for trigger
             services.AddSwaggerGen();
         }
 
