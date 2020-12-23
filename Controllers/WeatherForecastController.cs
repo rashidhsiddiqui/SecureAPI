@@ -27,16 +27,19 @@ namespace SecureAPI.Controllers
         [Authorize]
         [HttpGet]
         [Route("/getsecure")]
-        public IEnumerable<WeatherForecast> GetSecure()
+        //public IEnumerable<WeatherForecast> GetSecure()
+        public ActionResult<IEnumerable<string>> GetSecure()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            //var rng = new Random();
+            //return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            //{
+            //    Date = DateTime.Now.AddDays(index),
+            //    TemperatureC = rng.Next(-20, 55),
+            //    Summary = Summaries[rng.Next(Summaries.Length)]
+            //})
+            //.ToArray();
+
+            return new string[] { "Secure Rashid", "Secure Siddiqui" };
         }
 
         [HttpGet]
